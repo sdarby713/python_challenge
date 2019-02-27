@@ -33,7 +33,7 @@ with open(bankcsv, newline="", encoding="utf8") as csvfile:
 
 # format and write the summary report, both to the terminal and a text file
 
-outfile = 'output.txt'
+outfile = 'financial_analysis.txt'
 ofile = open(outfile,"w")
 
 outputline = ("Financial Analysis")
@@ -52,7 +52,7 @@ outputline = ("Total:          $" + str(totprofit))
 print (outputline)
 ofile.write(outputline + "\n")  
     
-outputline = ("Average Change: $" + '{:04.2f}'.format(totprofit/totmonths))
+outputline = ("Average Change: $" + '{:4.2f}'.format(totprofit/totmonths))
 print (outputline)
 ofile.write(outputline + "\n")   
     
